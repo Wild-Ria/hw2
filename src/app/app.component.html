@@ -2,11 +2,11 @@
 <div class="element">
   <ng-container *ngIf="(hotels$ | async) as hotels; else loading">
     <div class="element-left">
-      <app-main></app-main>
+      <app-main [hotels]="hotels"></app-main>
     </div>
     <div class="element-right">
-      <app-weather></app-weather>
-      <app-village></app-village>
+      <app-weather [weather]="hotels[0].weather"></app-weather>
+      <app-village [social]="hotels[0].social_info"></app-village>
     </div>
   </ng-container>
   <div class="clear"> </div>

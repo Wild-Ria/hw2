@@ -135,7 +135,6 @@ span.w-line {
   border-radius: 6px 6px 0px 0px;
 }
 span.cloud {
-  background: url(../src/assets/img/cloudy.png)no-repeat;
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -266,9 +265,11 @@ i.text-info{
   display: inline-block;
 }
 .activity-img ul li img{
+  width: 50px;
+  height: 50px;
   border-radius:50px;
 }
-/*--village start here--*/
+/*--social start here--*/
 .village {
   background: #fff;
   padding: 1.5em 1em;

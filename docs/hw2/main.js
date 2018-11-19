@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <ng-container *ngIf=\"(hotels$ | async) as hotels; else loading\">\n    <div class=\"element-left\">\n      <app-main></app-main>\n    </div>\n    <div class=\"element-right\">\n      <app-weather></app-weather>\n      <app-village></app-village>\n    </div>\n  </ng-container>\n  <div class=\"clear\"> </div>\n</div>\n<ng-template #loading>\n  <h1>...loading</h1>\n</ng-template>\n<div class=\"copy-right\">\n  <p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href=\"http://w3layouts.com/\" target=\"_blank\">  W3layouts </a></p>\n</div>\n"
+module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <ng-container *ngIf=\"(hotels$ | async) as hotels; else loading\">\n    <div class=\"element-left\">\n      <app-main></app-main>\n    </div>\n    <div class=\"element-right\">\n      <app-weather></app-weather>\n      <app-social></app-social>\n    </div>\n  </ng-container>\n  <div class=\"clear\"> </div>\n</div>\n<ng-template #loading>\n  <h1>...loading</h1>\n</ng-template>\n<div class=\"copy-right\">\n  <p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href=\"http://w3layouts.com/\" target=\"_blank\">  W3layouts </a></p>\n</div>\n"
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _village_village_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./village/village.component */ "./src/app/village/village.component.ts");
+/* harmony import */ var _village_village_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./social/social.component */ "./src/app/social/social.component.ts");
 /* harmony import */ var _weather_weather_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./weather/weather.component */ "./src/app/weather/weather.component.ts");
 /* harmony import */ var _main_main_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./main/main.component */ "./src/app/main/main.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -119,7 +119,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _village_village_component__WEBPACK_IMPORTED_MODULE_3__["VillageComponent"],
+                _village_village_component__WEBPACK_IMPORTED_MODULE_3__["SocialComponent"],
                 _weather_weather_component__WEBPACK_IMPORTED_MODULE_4__["WeatherComponent"],
                 _main_main_component__WEBPACK_IMPORTED_MODULE_5__["MainComponent"]
             ],
@@ -285,7 +285,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"element-bg-img\"><img src=\"../../assets/img/1.jpg\" alt=\"\" class=\"img-responsive\"> </div>\n<div class=\"element-left-bottom\">\n  <div class=\"ele-strip\">\n    <ul>\n      <li><a href=\"#\">Hotel</a></li>\n      <li><a href=\"#\">Fishing</a></li>\n      <li><a href=\"#\">Tours</a></li>\n      <li class=\"anc-bor\"><a href=\"#\">Weather</a></li>\n    </ul>\n  </div>\n  <div class=\"village\">\n    <h3>Righteous indignation & like</h3>\n    <span class=\"line\"> </span>\n    <div class=\"activity_box\">\n      <div class=\"scrollbar\" id=\"style-2\">\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed ut perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed ut perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"element-bg-img\"><img src=\"../../assets/img/1.jpg\" alt=\"\" class=\"img-responsive\"> </div>\n<div class=\"element-left-bottom\">\n  <div class=\"ele-strip\">\n    <ul>\n      <li><a href=\"#\">Hotel</a></li>\n      <li><a href=\"#\">Fishing</a></li>\n      <li><a href=\"#\">Tours</a></li>\n      <li class=\"anc-bor\"><a href=\"#\">Weather</a></li>\n    </ul>\n  </div>\n  <div class=\"social\">\n    <h3>Righteous indignation & like</h3>\n    <span class=\"line\"> </span>\n    <div class=\"activity_box\">\n      <div class=\"scrollbar\" id=\"style-2\">\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed ut perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n        <div class=\"activity-row\">\n          <div class=\"activity-desc\">\n            <h5>Resort Address</h5>\n            <p>Sed ut perspiciatis</p>\n            <p>Et harum quidem</p>\n            <h6>Tel:+1285 968 685</h6>\n          </div>\n          <div class=\"activity-img\">\n            <ul>\n              <li><img src='../../assets/img/res.jpg'  alt=\"\"/></li>\n              <li><img src='../../assets/img/r1.jpg'  alt=\"\"/></li>\n            </ul>\n          </div>\n          <div class=\"clear\"> </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -332,7 +332,7 @@ var MainComponent = /** @class */ (function () {
 
 /***/ "./src/app/village/village.component.css":
 /*!***********************************************!*\
-  !*** ./src/app/village/village.component.css ***!
+  !*** ./src/app/social/social.component.css ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -343,7 +343,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ "./src/app/village/village.component.html":
 /*!************************************************!*\
-  !*** ./src/app/village/village.component.html ***!
+  !*** ./src/app/social/social.component.html ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -354,14 +354,14 @@ module.exports = "<div class=\"teddy-bear\">\n  <div class=\"teddy-text\">\n    
 
 /***/ "./src/app/village/village.component.ts":
 /*!**********************************************!*\
-  !*** ./src/app/village/village.component.ts ***!
+  !*** ./src/app/social/social.component.ts ***!
   \**********************************************/
-/*! exports provided: VillageComponent */
+/*! exports provided: SocialComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VillageComponent", function() { return VillageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialComponent", function() { return VillageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -381,8 +381,8 @@ var VillageComponent = /** @class */ (function () {
     VillageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-village",
-            template: __webpack_require__(/*! ./village.component.html */ "./src/app/village/village.component.html"),
-            styles: [__webpack_require__(/*! ./village.component.css */ "./src/app/village/village.component.css")]
+            template: __webpack_require__(/*! ./social.component.html */ "./src/app/social/social.component.html"),
+            styles: [__webpack_require__(/*! ./social.component.css */ "./src/app/social/social.component.css")]
         }),
         __metadata("design:paramtypes", [])
     ], VillageComponent);
