@@ -7,6 +7,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { MainComponent } from './main/main.component';
 import { ActivityComponent } from './main/activity/activity.component';
 import { ActivityFilterPipe } from './activity-filter.pipe';
+import { PhoneNumberPipe } from './main/activity/phone-number.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ActivityFilterPipe } from './activity-filter.pipe';
     WeatherComponent,
     MainComponent,
     ActivityComponent,
-    ActivityFilterPipe
+    ActivityFilterPipe,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule

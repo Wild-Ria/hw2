@@ -8,6 +8,8 @@ import {IHotel} from '../data';
 export class MainComponent implements OnInit {
   @Input()
   public hotels: IHotel[];
+  @Input()
+  public hotel: IHotel;
   @Output() public selectedActivity: EventEmitter<any> = new EventEmitter();
 
   public uniqueActivities: any;
@@ -27,7 +29,7 @@ export class MainComponent implements OnInit {
   }
 
   public onFilterClick(event, type): void {
-    console.log(type);
+    this.selectedActivity.emit(type);
   }
 
 }

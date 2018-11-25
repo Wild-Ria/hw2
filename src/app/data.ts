@@ -87,18 +87,18 @@ const _data: IHotel[] = [
     'img': ['../assets/img/1.jpg'],
     'address': 'Resort Address',
     'phone': 1285968685,
-    'title': 'Et harum quidem',
+    'title': 'El quidem',
     'weather': {
-      'title': 'Et harum quidem',
+      'title': 'El quidem',
       'icon': '../assets/img/cloudy.png',
-      'water': 23,
-      'temperature': 30
+      'water': 17,
+      'temperature': 28
     },
     'social_info': {
       'title': 'Et harum quidem',
       'img': '../assets/img/r1.jpg',
-      'followers': 2850,
-      'following': 675
+      'followers': 28,
+      'following': 10
     },
     'type': 'tours'
   },

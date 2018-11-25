@@ -8,7 +8,7 @@ import {data, IWeather} from './data';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  @Input
+  @Input()
   public weather: IWeather;
 
   public hotels$ = data;

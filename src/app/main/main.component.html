@@ -12,7 +12,7 @@
     <span class="line"> </span>
     <div class="activity_box">
       <div class="scrollbar" id="style-2">
-        <app-activity *ngFor="let hotel of hotels" [hotel]="hotel"></app-activity>
+        <app-activity *ngFor="let hotel of hotels | activityFilter: type" [hotel]="hotel"></app-activity>
       </div>
     </div>
   </div>
