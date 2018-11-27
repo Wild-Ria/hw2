@@ -11,7 +11,6 @@ export class ActivityFilterPipe implements PipeTransform {
       return hotels;
     }
     return hotels.filter((hotel: IHotel) => {
-      console.log(JSON.stringify(hotel.type.toLowerCase().includes(activeHotelType.toLowerCase())));
       return hotel.type.toLowerCase().includes(activeHotelType.toLowerCase());
     });
   }

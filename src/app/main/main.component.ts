@@ -28,8 +28,8 @@ export class MainComponent implements OnInit {
 
   }
 
-  public onFilterClick(event, type): void {
-    this.selectedActivity.emit(type);
+  public onFilterClick(event, activityType): void {
+    this.selectedActivity.emit(activityType);
   }
 
 }
