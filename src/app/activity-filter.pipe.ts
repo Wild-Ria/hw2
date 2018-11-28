@@ -6,7 +6,6 @@ import {IHotel} from './data';
 })
 export class ActivityFilterPipe implements PipeTransform {
   transform(hotels: IHotel[], activeHotelType: string): IHotel[] {
-    console.log(activeHotelType);
     if (!activeHotelType) {
       return hotels;
     }

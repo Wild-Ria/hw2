@@ -28,17 +28,17 @@ export interface IHotel {
 const _data: IHotel[] = [
   {
     'img': ['../assets/img/res.jpg', '../assets/img/r1.jpg'],
-    'address': 'Resort Address',
+    'address': 'Hotel 1 Address',
     'phone': 1285968685,
-    'title': 'Et harum quidem',
+    'title': 'Hotel 1',
     'weather': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 1',
       'icon': '../assets/img/cloudy.png',
-      'water': 23,
-      'temperature': 30
+      'water': 21,
+      'temperature': 31
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 1',
       'img': '../assets/img/r1.jpg',
       'followers': 3080,
       'following': 100
@@ -47,17 +47,17 @@ const _data: IHotel[] = [
   },
   {
     'img': ['../assets/img/b1.jpg'],
-    'address': 'Resort Address',
-    'phone': 1285968685,
-    'title': 'Et harum quidem',
+    'address': 'Hotel 2 Address',
+    'phone': 2284968685,
+    'title': 'Hotel 2',
     'weather': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 2',
       'icon': '../assets/img/cloudy.png',
       'water': 23,
       'temperature': 30
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 2',
       'img': '../assets/img/r1.jpg',
       'followers': 2850,
       'following': 675
@@ -65,37 +65,56 @@ const _data: IHotel[] = [
     'type': 'hotel'
   },
   {
-    'img': ['../assets/img/1.jpg'],
-    'address': 'Resort Address',
-    'phone': 1285968685,
-    'title': 'Et harum quidem',
+    'img': ['../assets/img/b1.jpg'],
+    'address': 'Hotel 3 Address',
+    'phone': 2284968685,
+    'title': 'Hotel 3',
     'weather': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 3',
       'icon': '../assets/img/cloudy.png',
-      'water': 23,
-      'temperature': 30
+      'water': 25,
+      'temperature': 31.4
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Hotel 3',
       'img': '../assets/img/r1.jpg',
-      'followers': 2850,
-      'following': 675
+      'followers': 1800,
+      'following': 1900
     },
     'type': 'hotel'
   },
   {
     'img': ['../assets/img/1.jpg'],
-    'address': 'Resort Address',
+    'address': 'Fishing 1 Address',
     'phone': 1285968685,
-    'title': 'El quidem',
+    'title': 'Fishing 1',
     'weather': {
-      'title': 'El quidem',
-      'icon': '../assets/img/cloudy.png',
+      'title': 'Fishing 1',
+      'icon': '../assets/img/rainy.png',
+      'water': 13,
+      'temperature': 19
+    },
+    'social_info': {
+      'title': 'Fishing 1',
+      'img': '../assets/img/r1.jpg',
+      'followers': 2850,
+      'following': 675
+    },
+    'type': 'fishing'
+  },
+  {
+    'img': ['../assets/img/1.jpg'],
+    'address': 'Tours 1 Address',
+    'phone': 5385923685,
+    'title': 'Tours 1',
+    'weather': {
+      'title': 'Tours 1',
+      'icon': '../assets/img/sunny.png',
       'water': 17,
       'temperature': 28
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Tours 1',
       'img': '../assets/img/r1.jpg',
       'followers': 28,
       'following': 10
@@ -104,36 +123,55 @@ const _data: IHotel[] = [
   },
   {
     'img': ['../assets/img/1.jpg'],
-    'address': 'Resort Address',
-    'phone': 1285968685,
-    'title': 'Et harum quidem',
+    'address': 'Tours 2 Address',
+    'phone': 5385923685,
+    'title': 'Tours 2',
     'weather': {
-      'title': 'Et harum quidem',
-      'icon': '../assets/img/cloudy.png',
-      'water': 23,
-      'temperature': 30
+      'title': 'Tours 2',
+      'icon': '../assets/img/sunny.png',
+      'water': 19,
+      'temperature': 28
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Tours 2',
       'img': '../assets/img/r1.jpg',
-      'followers': 2850,
+      'followers': 2900,
+      'following': 1000
+    },
+    'type': 'tours'
+  },
+  {
+    'img': ['../assets/img/1.jpg'],
+    'address': 'Weather 1 Address',
+    'phone': 5385962285,
+    'title': 'Weather 1',
+    'weather': {
+      'title': 'Weather 1',
+      'icon': '../assets/img/cloudy.png',
+      'water': 19.5,
+      'temperature': 25
+    },
+    'social_info': {
+      'title': 'Weather 1',
+      'img': '../assets/img/r1.jpg',
+      'followers': 850,
       'following': 675
     },
     'type': 'weather'
   },
   {
     'img': ['../assets/img/1.jpg'],
-    'address': 'Resort Address',
-    'title': 'Et harum quidem',
-    'phone': 1285968685,
+    'address': 'Fishing 2 Address',
+    'title': 'Fishing 2',
+    'phone': 7385963685,
     'weather': {
-      'title': 'Et harum quidem',
+      'title': 'Fishing 2',
       'icon': '../assets/img/cloudy.png',
-      'water': 23,
-      'temperature': 30
+      'water': 30,
+      'temperature': 37
     },
     'social_info': {
-      'title': 'Et harum quidem',
+      'title': 'Fishing 2',
       'img': '../assets/img/r1.jpg',
       'followers': 2850,
       'following': 675
@@ -145,5 +183,5 @@ const _data: IHotel[] = [
 
 export const data: Observable<IHotel[]> = of(_data)
   .pipe(
-    delay(3000)
+    delay(2000)
   );

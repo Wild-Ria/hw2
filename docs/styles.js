@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/wildria/work/courses/hw2/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Volumes/LOOPME/learning/angular/hw2/src/styles.css */"./src/styles.css");
 
 
 /***/ })

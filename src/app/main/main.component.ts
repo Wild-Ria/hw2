@@ -10,7 +10,9 @@ export class MainComponent implements OnInit {
   public hotels: IHotel[];
   @Input()
   public hotel: IHotel;
-  @Output() public selectedActivity: EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  public onActivityChange: EventEmitter<string> = new EventEmitter<string>();
 
   public uniqueActivities: any;
 
@@ -28,8 +30,8 @@ export class MainComponent implements OnInit {
 
   }
 
-  public onFilterClick(event, activityType): void {
-    this.selectedActivity.emit(activityType);
+  public change(activityType: string): void {
+    this.onActivityChange.emit(activityType);
   }
 
 }

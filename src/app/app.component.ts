@@ -13,4 +13,10 @@ export class AppComponent {
 
   public hotels$ = data;
 
+  public activityType = '';
+
+  public onActivityChange(activityType: string) {
+    this.activityType = activityType;
+  }
+
 }

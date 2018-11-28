@@ -45,7 +45,6 @@ var ActivityFilterPipe = /** @class */ (function () {
     function ActivityFilterPipe() {
     }
     ActivityFilterPipe.prototype.transform = function (hotels, activeHotelType) {
-        console.log(activeHotelType);
         if (!activeHotelType) {
             return hotels;
         }
@@ -83,7 +82,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <ng-container *ngIf=\"(hotels$ | async) as hotels; else loading\">\n    <div class=\"element-left\">\n      <app-main [hotels]=\"hotels\"></app-main>\n    </div>\n    <div class=\"element-right\">\n      <app-weather [weather]=\"hotels[0].weather\"></app-weather>\n      <app-village [social]=\"hotels[0].social_info\"></app-village>\n    </div>\n  </ng-container>\n  <div class=\"clear\"> </div>\n</div>\n<ng-template #loading>\n  <h1>...loading</h1>\n</ng-template>\n<div class=\"copy-right\">\n  <p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href=\"http://w3layouts.com/\" target=\"_blank\">  W3layouts </a></p>\n</div>\n"
+module.exports = "<h1>Hot Weather Widget</h1>\n<div class=\"element\">\n  <ng-container *ngIf=\"(hotels$ | async) as hotels; else loading\">\n    <div class=\"element-left\">\n      <app-main [hotels]=\"hotels | activityFilter: activityType\"\n                (onActivityChange)=\"onActivityChange($event)\"></app-main>\n    </div>\n    <div class=\"element-right\">\n      <app-weather [weather]=\"(hotels | activityFilter: activityType)[0].weather\"></app-weather>\n      <app-village [social]=\"(hotels | activityFilter: activityType)[0].social_info\"></app-village>\n    </div>\n  </ng-container>\n  <div class=\"clear\"> </div>\n</div>\n<ng-template #loading>\n  <h1>...loading</h1>\n</ng-template>\n<div class=\"copy-right\">\n  <p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href=\"http://w3layouts.com/\" target=\"_blank\">  W3layouts </a></p>\n</div>\n"
 
 /***/ }),
 
@@ -113,7 +112,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.hotels$ = _data__WEBPACK_IMPORTED_MODULE_1__["data"];
+        this.activityType = '';
     }
+    AppComponent.prototype.onActivityChange = function (activityType) {
+        this.activityType = activityType;
+    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -212,17 +215,17 @@ __webpack_require__.r(__webpack_exports__);
 var _data = [
     {
         'img': ['../assets/img/res.jpg', '../assets/img/r1.jpg'],
-        'address': 'Resort Address',
+        'address': 'Hotel 1 Address',
         'phone': 1285968685,
-        'title': 'Et harum quidem',
+        'title': 'Hotel 1',
         'weather': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 1',
             'icon': '../assets/img/cloudy.png',
-            'water': 23,
-            'temperature': 30
+            'water': 21,
+            'temperature': 31
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 1',
             'img': '../assets/img/r1.jpg',
             'followers': 3080,
             'following': 100
@@ -231,17 +234,17 @@ var _data = [
     },
     {
         'img': ['../assets/img/b1.jpg'],
-        'address': 'Resort Address',
-        'phone': 1285968685,
-        'title': 'Et harum quidem',
+        'address': 'Hotel 2 Address',
+        'phone': 2284968685,
+        'title': 'Hotel 2',
         'weather': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 2',
             'icon': '../assets/img/cloudy.png',
             'water': 23,
             'temperature': 30
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 2',
             'img': '../assets/img/r1.jpg',
             'followers': 2850,
             'following': 675
@@ -249,37 +252,56 @@ var _data = [
         'type': 'hotel'
     },
     {
-        'img': ['../assets/img/1.jpg'],
-        'address': 'Resort Address',
-        'phone': 1285968685,
-        'title': 'Et harum quidem',
+        'img': ['../assets/img/b1.jpg'],
+        'address': 'Hotel 3 Address',
+        'phone': 2284968685,
+        'title': 'Hotel 3',
         'weather': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 3',
             'icon': '../assets/img/cloudy.png',
-            'water': 23,
-            'temperature': 30
+            'water': 25,
+            'temperature': 31.4
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Hotel 3',
             'img': '../assets/img/r1.jpg',
-            'followers': 2850,
-            'following': 675
+            'followers': 1800,
+            'following': 1900
         },
         'type': 'hotel'
     },
     {
         'img': ['../assets/img/1.jpg'],
-        'address': 'Resort Address',
+        'address': 'Fishing 1 Address',
         'phone': 1285968685,
-        'title': 'El quidem',
+        'title': 'Fishing 1',
         'weather': {
-            'title': 'El quidem',
-            'icon': '../assets/img/cloudy.png',
+            'title': 'Fishing 1',
+            'icon': '../assets/img/rainy.png',
+            'water': 13,
+            'temperature': 19
+        },
+        'social_info': {
+            'title': 'Fishing 1',
+            'img': '../assets/img/r1.jpg',
+            'followers': 2850,
+            'following': 675
+        },
+        'type': 'fishing'
+    },
+    {
+        'img': ['../assets/img/1.jpg'],
+        'address': 'Tours 1 Address',
+        'phone': 5385923685,
+        'title': 'Tours 1',
+        'weather': {
+            'title': 'Tours 1',
+            'icon': '../assets/img/sunny.png',
             'water': 17,
             'temperature': 28
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Tours 1',
             'img': '../assets/img/r1.jpg',
             'followers': 28,
             'following': 10
@@ -288,36 +310,55 @@ var _data = [
     },
     {
         'img': ['../assets/img/1.jpg'],
-        'address': 'Resort Address',
-        'phone': 1285968685,
-        'title': 'Et harum quidem',
+        'address': 'Tours 2 Address',
+        'phone': 5385923685,
+        'title': 'Tours 2',
         'weather': {
-            'title': 'Et harum quidem',
-            'icon': '../assets/img/cloudy.png',
-            'water': 23,
-            'temperature': 30
+            'title': 'Tours 2',
+            'icon': '../assets/img/sunny.png',
+            'water': 19,
+            'temperature': 28
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Tours 2',
             'img': '../assets/img/r1.jpg',
-            'followers': 2850,
+            'followers': 2900,
+            'following': 1000
+        },
+        'type': 'tours'
+    },
+    {
+        'img': ['../assets/img/1.jpg'],
+        'address': 'Weather 1 Address',
+        'phone': 5385962285,
+        'title': 'Weather 1',
+        'weather': {
+            'title': 'Weather 1',
+            'icon': '../assets/img/cloudy.png',
+            'water': 19.5,
+            'temperature': 25
+        },
+        'social_info': {
+            'title': 'Weather 1',
+            'img': '../assets/img/r1.jpg',
+            'followers': 850,
             'following': 675
         },
         'type': 'weather'
     },
     {
         'img': ['../assets/img/1.jpg'],
-        'address': 'Resort Address',
-        'title': 'Et harum quidem',
-        'phone': 1285968685,
+        'address': 'Fishing 2 Address',
+        'title': 'Fishing 2',
+        'phone': 7385963685,
         'weather': {
-            'title': 'Et harum quidem',
+            'title': 'Fishing 2',
             'icon': '../assets/img/cloudy.png',
-            'water': 23,
-            'temperature': 30
+            'water': 30,
+            'temperature': 37
         },
         'social_info': {
-            'title': 'Et harum quidem',
+            'title': 'Fishing 2',
             'img': '../assets/img/r1.jpg',
             'followers': 2850,
             'following': 675
@@ -326,7 +367,7 @@ var _data = [
     }
 ];
 var data = Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["of"])(_data)
-    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["delay"])(3000));
+    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["delay"])(2000));
 
 
 /***/ }),
@@ -426,7 +467,7 @@ var PhoneNumberPipe = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"element-bg-img\"><img src=\"../../assets/img/1.jpg\" alt=\"\" class=\"img-responsive\"> </div>\n<div class=\"element-left-bottom\">\n  <div class=\"ele-strip\">\n    <ul>\n      <li *ngFor=\"let activity of uniqueActivities\">\n        <a (click)=\"onFilterClick($event, activity)\">{{activity}}</a>\n      </li>\n    </ul>\n  </div>\n  <div class=\"village\">\n    <h3>Righteous indignation & like</h3>\n    <span class=\"line\"> </span>\n    <div class=\"activity_box\">\n      <div class=\"scrollbar\" id=\"style-2\">\n        <app-activity *ngFor=\"let hotel of hotels | activityFilter: type\" [hotel]=\"hotel\"></app-activity>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"element-bg-img\"><img src=\"../../assets/img/1.jpg\" alt=\"\" class=\"img-responsive\"> </div>\n<div class=\"element-left-bottom\">\n  <div class=\"ele-strip\">\n    <ul>\n      <li *ngFor=\"let activity of uniqueActivities\"\n          (click)=\"change(activity)\">\n        <a>{{activity}}</a>\n      </li>\n    </ul>\n  </div>\n  <div class=\"village\">\n    <h3>Righteous indignation & like</h3>\n    <span class=\"line\"> </span>\n    <div class=\"activity_box\">\n      <div class=\"scrollbar\" id=\"style-2\">\n        <app-activity *ngFor=\"let hotel of hotels | activityFilter: type\" [hotel]=\"hotel\"></app-activity>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -453,7 +494,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var MainComponent = /** @class */ (function () {
     function MainComponent() {
-        this.selectedActivity = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.onActivityChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     MainComponent.prototype.ngOnInit = function () {
         var result = [];
@@ -462,8 +503,8 @@ var MainComponent = /** @class */ (function () {
         });
         this.uniqueActivities = Array.from(new Set(result));
     };
-    MainComponent.prototype.onFilterClick = function (event, activityType) {
-        this.selectedActivity.emit(activityType);
+    MainComponent.prototype.change = function (activityType) {
+        this.onActivityChange.emit(activityType);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -476,7 +517,7 @@ var MainComponent = /** @class */ (function () {
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-    ], MainComponent.prototype, "selectedActivity", void 0);
+    ], MainComponent.prototype, "onActivityChange", void 0);
     MainComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-main',
@@ -656,7 +697,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/wildria/work/courses/hw2/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Volumes/LOOPME/learning/angular/hw2/src/main.ts */"./src/main.ts");
 
 
 /***/ })

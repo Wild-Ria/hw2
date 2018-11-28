@@ -2,8 +2,9 @@
 <div class="element-left-bottom">
   <div class="ele-strip">
     <ul>
-      <li *ngFor="let activity of uniqueActivities">
-        <a (click)="onFilterClick($event, activity)">{{activity}}</a>
+      <li *ngFor="let activity of uniqueActivities"
+          (click)="change(activity)">
+        <a>{{activity}}</a>
       </li>
     </ul>
   </div>
