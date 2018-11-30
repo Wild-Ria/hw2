@@ -14,7 +14,9 @@ export class MainComponent implements OnInit {
   @Output()
   public onActivityChange: EventEmitter<string> = new EventEmitter<string>();
 
-  public uniqueActivities: any;
+  public uniqueActivities: string[];
+
+  public activityType: string;
 
   constructor() { }
 
